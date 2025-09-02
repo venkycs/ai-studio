@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="22" viewBox="0 0 24 22" fill="currentColor">
+  <!-- IHC Logo Design - Interconnected buildings representing International Holding Company -->
+  <rect x="2" y="10" width="4" height="10" rx="0.5" fill="currentColor"/>
+  <rect x="7" y="6" width="4" height="14" rx="0.5" fill="currentColor"/>
+  <rect x="12" y="8" width="4" height="12" rx="0.5" fill="currentColor"/>
+  <rect x="17" y="4" width="4" height="16" rx="0.5" fill="currentColor"/>
+  <!-- Connecting elements to show integration -->
+  <line x1="6" y1="12" x2="7" y2="12" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+  <line x1="11" y1="10" x2="12" y2="10" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+  <line x1="16" y1="8" x2="17" y2="8" stroke="currentColor" stroke-width="1" opacity="0.6"/>
+  <!-- Top accent representing global reach -->
+  <circle cx="12" cy="2" r="1.5" fill="currentColor" opacity="0.8"/>
+  <path d="M10.5 2.5 L13.5 2.5" stroke="currentColor" stroke-width="0.5" opacity="0.6"/>
+</svg>

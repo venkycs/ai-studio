@@ -1,11 +1,10 @@
-import { FaDiscord, FaGithub } from "react-icons/fa";
 import { ForwardedIconComponent } from "@/components/common/genericIconComponent";
 import {
   DATASTAX_DOCS_URL,
-  DISCORD_URL,
   DOCS_URL,
-  GITHUB_URL,
-  TWITTER_URL,
+  IHC_CONTACT_URL,
+  IHC_SUPPORT_URL,
+  IHC_WEBSITE_URL,
 } from "@/constants/constants";
 import { useLogout } from "@/controllers/API/queries/auth";
 import { CustomProfileIcon } from "@/customization/components/custom-profile-icon";
@@ -124,38 +123,38 @@ export const AccountMenu = () => {
           </div>
 
           <div>
-            <HeaderMenuItemLink newPage href={GITHUB_URL}>
+            <HeaderMenuItemLink newPage href={IHC_WEBSITE_URL}>
               <span
-                data-testid="menu_github_button"
-                id="menu_github_button"
+                data-testid="menu_website_button"
+                id="menu_website_button"
                 className="flex items-center gap-2"
               >
-                <FaGithub className="h-4 w-4" />
-                GitHub
+                <ForwardedIconComponent name="Globe" className="h-4 w-4" />
+                IHC Website
               </span>
             </HeaderMenuItemLink>
-            <HeaderMenuItemLink newPage href={DISCORD_URL}>
+            <HeaderMenuItemLink newPage href={IHC_SUPPORT_URL}>
               <span
-                data-testid="menu_discord_button"
-                id="menu_discord_button"
+                data-testid="menu_support_button"
+                id="menu_support_button"
                 className="flex items-center gap-2"
               >
-                <FaDiscord className="h-4 w-4 text-[#5865F2]" />
-                Discord
+                <ForwardedIconComponent name="HelpCircle" className="h-4 w-4" />
+                Support
               </span>
             </HeaderMenuItemLink>
-            <HeaderMenuItemLink newPage href={TWITTER_URL}>
+            <HeaderMenuItemLink newPage href={IHC_CONTACT_URL}>
               <span
-                data-testid="menu_twitter_button"
-                id="menu_twitter_button"
+                data-testid="menu_contact_button"
+                id="menu_contact_button"
                 className="flex items-center gap-2"
               >
                 <ForwardedIconComponent
                   strokeWidth={2}
-                  name="TwitterX"
+                  name="Mail"
                   className="h-4 w-4"
                 />
-                X
+                Contact
               </span>
             </HeaderMenuItemLink>
           </div>

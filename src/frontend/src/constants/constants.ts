@@ -1098,13 +1098,13 @@ export const OPENAI_VOICES = [
 export const DEFAULT_POLLING_INTERVAL = 5000;
 export const DEFAULT_TIMEOUT = 30000;
 export const DEFAULT_FILE_PICKER_TIMEOUT = 60000;
-export const DISCORD_URL = "https://discord.com/invite/EqksyE2EX9";
-export const GITHUB_URL = "https://github.com/langflow-ai/langflow";
-export const TWITTER_URL = "https://x.com/langflow_ai";
-export const DOCS_URL = "https://docs.langflow.org";
+export const IHC_WEBSITE_URL = "https://www.ihcuae.com";
+export const IHC_SUPPORT_URL = "https://www.ihcuae.com/support";
+export const IHC_CONTACT_URL = "https://www.ihcuae.com/contact";
+export const DOCS_URL = "https://www.ihcuae.com/ai-studio/docs";
 export const DATASTAX_DOCS_URL =
   "https://docs.datastax.com/en/langflow/index.html";
-export const DESKTOP_URL = "https://www.langflow.org/desktop";
-export const BUG_REPORT_URL = "https://github.com/langflow-ai/langflow/issues";
+export const DESKTOP_URL = "https://www.ihcuae.com/ai-studio/desktop";
+export const BUG_REPORT_URL = "https://www.ihcuae.com/ai-studio/support";
 
 export const UUID_PARSING_ERROR = "uuid_parsing";

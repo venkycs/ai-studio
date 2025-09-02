@@ -1,8 +1,7 @@
 import { type FC, useEffect, useMemo, useState } from "react";
-import { FaDiscord, FaGithub } from "react-icons/fa";
 import IconComponent from "@/components/common/genericIconComponent";
 import { Button } from "@/components/ui/button";
-import { DISCORD_URL, GITHUB_URL } from "@/constants/constants";
+import { IHC_SUPPORT_URL, IHC_WEBSITE_URL } from "@/constants/constants";
 import { useGetUserData, useUpdateUser } from "@/controllers/API/queries/auth";
 import ModalsComponent from "@/pages/MainPage/components/modalsComponent";
 import useFlowsManagerStore from "@/stores/flowsManagerStore";
@@ -38,11 +37,11 @@ export const GetStartedProgress: FC<{
     const stepValue = 33;
     let totalPercentage = 0;
 
-    if (userData?.optins?.github_starred) {
+    if (userData?.optins?.ihc_website_visited) {
       totalPercentage += stepValue;
     }
 
-    if (userData?.optins?.discord_clicked) {
+    if (userData?.optins?.support_clicked) {
       totalPercentage += stepValue;
     }
 
@@ -69,12 +68,12 @@ export const GetStartedProgress: FC<{
       {
         onSuccess: () => {
           mutateLoggedUser({});
-          if (key === "github_starred") {
+          if (key === "ihc_website_visited") {
             setIsGithubStarredChild(true);
-            window.open(GITHUB_URL, "_blank", "noopener,noreferrer");
-          } else if (key === "discord_clicked") {
+            window.open(IHC_WEBSITE_URL, "_blank", "noopener,noreferrer");
+          } else if (key === "support_clicked") {
             setIsDiscordJoinedChild(true);
-            window.open(DISCORD_URL, "_blank", "noopener,noreferrer");
+            window.open(IHC_SUPPORT_URL, "_blank", "noopener,noreferrer");
           } else if (key === "dialog_dismissed") {
             handleDismissDialog();
           }
@@ -124,7 +123,7 @@ export const GetStartedProgress: FC<{
 
       <div className="mt-2 space-y-1">
         <Button
-          data-testid="github_starred_btn_get_started"
+          data-testid="ihc_website_btn_get_started"
           unstyled
           className={cn(
             "w-full",
@@ -135,7 +134,7 @@ export const GetStartedProgress: FC<{
               e.preventDefault();
               return;
             }
-            handleUserTrack("github_starred");
+            handleUserTrack("ihc_website_visited");
           }}
         >
           <div
@@ -145,14 +144,14 @@ export const GetStartedProgress: FC<{
             )}
           >
             {isGithubStarredChild ? (
-              <span data-testid="github_starred_icon_get_started">
+              <span data-testid="ihc_website_icon_get_started">
                 <IconComponent
                   name="Check"
                   className="h-4 w-4 text-accent-emerald-foreground"
                 />
               </span>
             ) : (
-              <FaGithub className="h-4 w-4" />
+              <IconComponent name="Building2" className="h-4 w-4" />
             )}
             <span
               className={cn(
@@ -160,13 +159,13 @@ export const GetStartedProgress: FC<{
                 isGithubStarredChild && "text-muted-foreground line-through",
               )}
             >
-              Star repo for updates
+              Visit IHC Website
             </span>
           </div>
         </Button>
 
         <Button
-          data-testid="discord_joined_btn_get_started"
+          data-testid="support_btn_get_started"
           unstyled
           className={cn(
             "w-full",
@@ -177,7 +176,7 @@ export const GetStartedProgress: FC<{
               e.preventDefault();
               return;
             }
-            handleUserTrack("discord_clicked");
+            handleUserTrack("support_clicked");
           }}
         >
           <div
@@ -194,7 +193,7 @@ export const GetStartedProgress: FC<{
                 />
               </span>
             ) : (
-              <FaDiscord className="h-4 w-4 text-[#5865F2]" />
+              <IconComponent name="HelpCircle" className="h-4 w-4" />
             )}
             <span
               className={cn(
@@ -202,7 +201,7 @@ export const GetStartedProgress: FC<{
                 isDiscordJoinedChild && "text-muted-foreground line-through",
               )}
             >
-              Join the community
+              Get Support
             </span>
           </div>
         </Button>

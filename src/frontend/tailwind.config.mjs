@@ -318,6 +318,13 @@ const config = {
         "red-foreground": "hsl(var(--red-foreground))",
         "indigo-foreground": "hsl(var(--indigo-foreground))",
         "discord-color": "var(--discord-color)",
+        // IHC Stunning Black Palette
+        "ihc-black": "hsl(0, 0%, 5%)",
+        "ihc-charcoal": "hsl(0, 0%, 8%)",
+        "ihc-dark-gray": "hsl(0, 0%, 15%)",
+        "ihc-elegant-gray": "hsl(0, 0%, 20%)",
+        "ihc-light-gray": "hsl(0, 0%, 95%)",
+        "ihc-pure-white": "hsl(0, 0%, 98%)",
       },
       borderRadius: {
         lg: `var(--radius)`,

@@ -21,7 +21,7 @@
     --border: 240 6% 90%; /* hsl(240, 6%, 90%) */
     --input: 240 6% 90%; /* hsl(240, 6%, 90%) */
     --primary-foreground: 0 0% 100%; /* hsl(0, 0%, 100%) */
-    --primary: 0 0% 0%; /* hsl(0, 0%, 0%) */
+    --primary: 0 0% 8%; /* hsl(0, 0%, 8%) - Stunning Deep Black */
     --secondary: 0 0% 100%; /* hsl(0, 0%, 100%) */
     --secondary-foreground: 240 4% 16%; /* hsl(240, 4%, 16%) */
     --accent: 240 5% 96%; /* hsl(240, 5%, 96%) */
@@ -30,8 +30,8 @@
     --destructive-foreground: 0 0% 100%; /* hsl(0, 0%, 100%) */
     --accent-amber: 26 90% 37%; /* hsl(26, 90%, 37%) */
     --accent-amber-foreground: 26 90% 37%; /* hsl(26, 90%, 37%) */
-    --ring: 0 0% 0%; /* hsl(0, 0%, 0%) */
-    --primary-hover: 240 4% 16%; /* hsl(240, 4%, 16%) */
+    --ring: 0 0% 15%; /* hsl(0, 0%, 15%) - Charcoal Ring */
+    --primary-hover: 0 0% 12%; /* hsl(0, 0%, 12%) - Deep Black Hover */
     --secondary-hover: 240 6% 90%; /* hsl(240, 6%, 90%) */
     --placeholder-foreground: 240 5% 65%; /* hsl(240, 5%, 65%) */
     --canvas: 240 5% 96%; /* hsl(240, 5%, 96%) */
@@ -39,8 +39,8 @@
     --accent-emerald: 149 80% 90%; /* hsl(149, 80%, 90%) */
     --accent-emerald-foreground: 161 94% 30%; /* hsl(161, 94%, 30%) */
     --accent-emerald-hover: 152.4 76% 80.4%; /* hsl(152.4, 76%, 80.4%) */
-    --accent-indigo: 226 100% 94%; /* hsl(226, 100%, 94%) */
-    --accent-indigo-foreground: 243 75% 59%; /* hsl(243, 75%, 59%) */
+    --accent-indigo: 220 15% 20%; /* hsl(220, 15%, 20%) - Charcoal Steel */
+    --accent-indigo-foreground: 240 100% 99%; /* hsl(240, 100%, 99%) - Pure White */
     --accent-red-foreground: 0 72% 51%; /* hsl(0, 72%, 51%) */
 
     --accent-pink: 326, 78%, 95%; /* hsl(326, 78%, 95%) */
@@ -69,7 +69,7 @@
     --jse-info-color: hsl(221, 83%, 53%);
     --jse-success-color: hsl(142, 76%, 36%);
 
-    --node-selected: 243 75% 59%;
+    --node-selected: 0 0% 15%; /* Sophisticated Charcoal */
     --round-btn-shadow: #00000063;
     --ice: #31a3cc;
     --selected: #2196f3;
@@ -96,13 +96,13 @@
     --chat-bot-icon: #afe6ef;
     --chat-user-icon: #aface9;
 
-    --component-icon: #d8598a;
-    --flow-icon: #2f67d0;
+    --component-icon: #1a1a1a; /* Stunning Dark Gray */
+    --flow-icon: #2d2d2d; /* Sophisticated Charcoal */
     --hover: #f2f4f5;
     --disabled-run: #6366f1;
 
-    --filter-foreground: #4f46e5;
-    --filter-background: #eef2ff;
+    --filter-foreground: #f5f5f5; /* Elegant Light Gray */
+    --filter-background: #1a1a1a; /* Deep Black Background */
     /* Colors that are shared in dark and light mode */
     --blur-shared: #151923de;
     --build-trigger: #dc735b;
@@ -146,8 +146,8 @@
     --datatype-yellow: 40.6 96.1% 40.4%;
     --datatype-yellow-foreground: 54.9 96.7% 88%;
 
-    --datatype-blue: 221.2 83.2% 53.3%;
-    --datatype-blue-foreground: 214.3 94.6% 92.7%;
+    --datatype-blue: 217 78% 45%; /* Adjusted to complement IHC blue */
+    --datatype-blue-foreground: 217 91% 92%; /* IHC light blue */
 
     --datatype-gray: 215 13.8% 34.1%;
     --datatype-gray-foreground: 220 14.3% 95.9%;
@@ -173,8 +173,8 @@
     --datatype-cyan: 191.6 91.4% 36.5%;
     --datatype-cyan-foreground: 185.1 95.9% 90.4%;
 
-    --datatype-indigo: 243.4 75.4% 58.6%;
-    --datatype-indigo-foreground: 226.5 100% 93.9%;
+    --datatype-indigo: 217 65% 35%; /* Darker IHC blue tone */
+    --datatype-indigo-foreground: 217 91% 94%; /* Light IHC blue */
 
     --datatype-orange: 20.5 90.2% 48.2%;
     --datatype-orange-foreground: 34.3 100% 91.8%;
@@ -213,16 +213,16 @@
     --popover-foreground: 0 0% 100%; /* hsl(0, 0%, 100%) */
     --border: 240 5% 26%; /* hsl(240, 5%, 26%) */
     --input: 240 5% 34%; /* hsl(240, 5%, 34%) */
-    --primary-foreground: 0 0% 0%; /* hsl(0, 0%, 0%) */
-    --primary: 0 0% 100%; /* hsl(0, 0%, 100%) */
+    --primary-foreground: 0 0% 98%; /* hsl(0, 0%, 98%) - Pure White */
+    --primary: 0 0% 5%; /* hsl(0, 0%, 5%) - Absolutely Stunning Black */
     --secondary: 0 0% 0%; /* hsl(0, 0%, 0%) */
     --secondary-foreground: 240 6% 90%; /* hsl(240, 6%, 90%) */
     --accent: 240 4% 16%; /* hsl(240, 4%, 16%) */
     --accent-foreground: 0 0% 100%; /* hsl(0, 0%, 100%) */
     --destructive: 0 84% 60%; /* hsl(0, 84%, 60%) */
     --destructive-foreground: 0 0% 100%; /* hsl(0, 0%, 100%) */
-    --ring: 0 0% 100%; /* hsl(0, 0%, 100%) */
-    --primary-hover: 240 6% 90%; /* hsl(240, 6%, 90%) */
+    --ring: 0 0% 20%; /* hsl(0, 0%, 20%) - Elegant Dark Ring */
+    --primary-hover: 0 0% 10%; /* hsl(0, 0%, 10%) - Stunning Black Hover */
     --secondary-hover: 240 4% 16%; /* hsl(240, 4%, 16%) */
     --placeholder-foreground: 240 4% 46%; /* hsl(240, 4%, 46%) */
     --canvas: 0 0% 0%; /* hsl(0, 0%, 0%) */
@@ -231,8 +231,8 @@
     --accent-emerald: 164 86% 16%; /* hsl(164, 86%, 16%) */
     --accent-emerald-foreground: 158 64% 52%; /* hsl(158, 64%, 52%) */
     --accent-emerald-hover: 163.1 88.1% 19.8%; /* hsl(163.1, 88.1%, 19.8%) */
-    --accent-indigo: 242 25% 34%; /* hsl(242, 25%, 34%) */
-    --accent-indigo-foreground: 234 89% 74%; /* hsl(234, 89%, 74%) */
+    --accent-indigo: 0 0% 8%; /* hsl(0, 0%, 8%) - Deep Charcoal */
+    --accent-indigo-foreground: 0 0% 95%; /* hsl(0, 0%, 95%) - Elegant White */
     --accent-pink: 336, 69%, 30%; /* hsl(336, 69%, 30%) */
     --accent-pink-foreground: 329 86% 70%; /* hsl(329, 86%, 70%) */
     --accent-purple-foreground: 270, 95%, 75%;
@@ -346,7 +346,7 @@
     --warning-foreground: 240 6% 10%; /* hsl(240, 6%, 10%) */
     --warning-text: 0 0% 100%; /* hsl(0, 0%, 100%) */
 
-    --node-selected: 234 89% 74%;
+    --node-selected: 0 0% 18%; /* Sophisticated Dark Selection */
 
     --ice: #60a5fa;
     --hover: #1a202e;
@@ -354,8 +354,8 @@
     --selected: #0369a1;
     --discord-color: #5765f2;
 
-    --filter-foreground: #eef2ff;
-    --filter-background: #4e46e599;
+    --filter-foreground: #f0f0f0; /* Elegant Light */
+    --filter-background: #1a1a1a99; /* Deep Black with transparency */
 
     --round-btn-shadow: #00000063;
 
@@ -373,8 +373,8 @@
     --medium-indigo: #6366f1;
     --low-indigo: #e0e7ff;
 
-    --component-icon: #c35f85;
-    --flow-icon: #2467e4;
+    --component-icon: #2a2a2a; /* Stunning Dark Component */
+    --flow-icon: #3a3a3a; /* Elegant Flow Icon */
 
     --build-trigger: #dc735b;
     --chat-trigger: #5c8be1;
@@ -417,8 +417,8 @@
     --datatype-yellow: 50.4 97.8% 63.5%;
     --datatype-yellow-foreground: 40.6 96.1% 40.4%;
 
-    --datatype-blue: 211.7 96.4% 78.4%;
-    --datatype-blue-foreground: 221.2 83.2% 53.3%;
+    --datatype-blue: 217 85% 75%; /* IHC blue tone for dark */
+    --datatype-blue-foreground: 217 78% 35%; /* Darker IHC blue */
 
     --datatype-gray: 216 12.2% 83.9%;
     --datatype-gray-foreground: 215 13.8% 34.1%;
@@ -444,8 +444,8 @@
     --datatype-cyan: 187 92.4% 69%;
     --datatype-cyan-foreground: 191.6 91.4% 36.5%;
 
-    --datatype-indigo: 229.7 93.5% 81.8%;
-    --datatype-indigo-foreground: 243.4 75.4% 58.6%;
+    --datatype-indigo: 217 80% 80%; /* Light IHC blue for dark theme */
+    --datatype-indigo-foreground: 217 65% 25%; /* Deep IHC blue */
 
     --datatype-orange: 20.5 90.2% 48.2%;
     --datatype-orange-foreground: 30.7 97.2% 72.4%;

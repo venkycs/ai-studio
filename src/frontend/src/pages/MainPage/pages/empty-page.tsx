@@ -1,13 +1,12 @@
 import { ExternalLink } from "lucide-react";
-import { FaDiscord, FaGithub } from "react-icons/fa";
 import { useShallow } from "zustand/react/shallow";
-import logoDarkPng from "@/assets/logo_dark.png";
-import logoLightPng from "@/assets/logo_light.png";
+import IHCLogo from "@/assets/IHCLogo.svg?react";
+import IHCLogoStunning from "@/assets/IHCLogoStunning.svg?react";
 import { ForwardedIconComponent } from "@/components/common/genericIconComponent";
 import CardsWrapComponent from "@/components/core/cardsWrapComponent";
 import { Button } from "@/components/ui/button";
 import { DotBackgroundDemo } from "@/components/ui/dot-background";
-import { DISCORD_URL, GITHUB_URL } from "@/constants/constants";
+import { IHC_SUPPORT_URL, IHC_WEBSITE_URL } from "@/constants/constants";
 import { useGetUserData, useUpdateUser } from "@/controllers/API/queries/auth";
 import useAuthStore from "@/stores/authStore";
 import { useDarkStore } from "@/stores/darkStore";
@@ -15,12 +14,12 @@ import { useFolderStore } from "@/stores/foldersStore";
 import { formatNumber } from "@/utils/utils";
 import useFileDrop from "../hooks/use-on-file-drop";
 
-const EMPTY_PAGE_TITLE = "Welcome to Langflow";
-const EMPTY_PAGE_DESCRIPTION = "Your new favorite way to ship Agents";
-const EMPTY_PAGE_GITHUB_DESCRIPTION =
-  "Follow development, star the repo, and shape the future.";
-const EMPTY_PAGE_DISCORD_DESCRIPTION =
-  "Join builders, ask questions, and show off your agents";
+const EMPTY_PAGE_TITLE = "Welcome to AI Studio by IHC";
+const EMPTY_PAGE_DESCRIPTION = "Your sophisticated AI development platform";
+const EMPTY_PAGE_IHC_DESCRIPTION =
+  "Discover our comprehensive business solutions and innovations.";
+const EMPTY_PAGE_SUPPORT_DESCRIPTION =
+  "Get expert assistance and support for your AI projects";
 const EMPTY_PAGE_DRAG_AND_DROP_TEXT =
   "Already have a flow? Drag and drop to upload.";
 const EMPTY_PAGE_FOLDER_DESCRIPTION = "Empty folder";
@@ -68,19 +67,17 @@ export const EmptyPageCommunity = ({
           <div className="z-50 flex h-full w-full flex-col items-center justify-center gap-5">
             <div className="z-50 flex flex-col items-center gap-2">
               <div className="z-50 dark:hidden">
-                <img
-                  src={logoLightPng}
-                  alt="Langflow Logo Light"
+                <IHCLogo
+                  title="AI Studio by IHC"
                   data-testid="empty_page_logo_light"
-                  className="relative top-3"
+                  className="relative top-3 h-16 w-16"
                 />
               </div>
               <div className="z-50 hidden dark:block">
-                <img
-                  src={logoDarkPng}
-                  alt="Langflow Logo Dark"
+                <IHCLogoStunning
+                  title="AI Studio by IHC - Stunning"
                   data-testid="empty_page_logo_dark"
-                  className="relative top-3"
+                  className="relative top-3 h-16 w-16"
                 />
               </div>
               <span
@@ -105,25 +102,28 @@ export const EmptyPageCommunity = ({
                 unstyled
                 className="group mx-3 h-[84px] sm:mx-0"
                 onClick={() => {
-                  handleUserTrack("github_starred")();
-                  window.open(GITHUB_URL, "_blank", "noopener,noreferrer");
+                  handleUserTrack("ihc_website_visited")();
+                  window.open(IHC_WEBSITE_URL, "_blank", "noopener,noreferrer");
                 }}
-                data-testid="empty_page_github_button"
+                data-testid="empty_page_ihc_button"
               >
-                <div className="relative flex flex-col rounded-lg border-[1px] bg-background p-4 transition-all duration-300 hover:border-accent-pink-foreground">
+                <div className="relative flex flex-col rounded-lg border-[1px] bg-background p-4 transition-all duration-300 hover:border-ihc-charcoal">
                   <div className="grid w-full items-center justify-between gap-2">
                     <div className="flex gap-3">
-                      <FaGithub className="h-6 w-6" />
+                      <ForwardedIconComponent
+                        name="Building2"
+                        className="h-6 w-6"
+                      />
                       <div>
-                        <span className="font-semibold">GitHub</span>
+                        <span className="font-semibold">IHC Group</span>
                         <span className="ml-2 font-mono text-muted-foreground">
-                          {formatNumber(stars)}
+                          International
                         </span>
                       </div>
                     </div>
                     <div>
                       <span className="text-base text-secondary-foreground">
-                        {EMPTY_PAGE_GITHUB_DESCRIPTION}
+                        {EMPTY_PAGE_IHC_DESCRIPTION}
                       </span>
                     </div>
                   </div>
@@ -135,25 +135,28 @@ export const EmptyPageCommunity = ({
                 unstyled
                 className="group mx-3 h-[84px] sm:mx-0"
                 onClick={() => {
-                  handleUserTrack("discord_clicked")();
-                  window.open(DISCORD_URL, "_blank", "noopener,noreferrer");
+                  handleUserTrack("support_clicked")();
+                  window.open(IHC_SUPPORT_URL, "_blank", "noopener,noreferrer");
                 }}
-                data-testid="empty_page_discord_button"
+                data-testid="empty_page_support_button"
               >
-                <div className="relative flex flex-col rounded-lg border-[1px] bg-background p-4 transition-all duration-300 hover:border-discord-color">
+                <div className="relative flex flex-col rounded-lg border-[1px] bg-background p-4 transition-all duration-300 hover:border-ihc-elegant-gray">
                   <div className="grid w-full items-center justify-between gap-2">
                     <div className="flex gap-3">
-                      <FaDiscord className="h-6 w-6 text-discord-color" />
+                      <ForwardedIconComponent
+                        name="HeadphonesIcon"
+                        className="h-6 w-6"
+                      />
                       <div>
-                        <span className="font-semibold">Discord</span>
+                        <span className="font-semibold">Support</span>
                         <span className="ml-2 font-mono text-muted-foreground">
-                          {formatNumber(discordCount)}
+                          24/7
                         </span>
                       </div>
                     </div>
                     <div>
                       <span className="text-base text-secondary-foreground">
-                        {EMPTY_PAGE_DISCORD_DESCRIPTION}
+                        {EMPTY_PAGE_SUPPORT_DESCRIPTION}
                       </span>
                     </div>
                   </div>
